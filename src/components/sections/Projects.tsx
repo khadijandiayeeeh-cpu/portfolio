@@ -1,100 +1,187 @@
 import { motion } from "framer-motion";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
 import { projects } from "../../data/projects";
 
-const Projects = () => {
+export default function Projects() {
   return (
     <section
       id="projects"
-      className="py-28 px-6 bg-[#050816]"
+      className="py-28 px-6"
     >
+
       <div className="max-w-7xl mx-auto">
 
-        <motion.h2
-          initial={{ opacity:0,y:50 }}
-          whileInView={{ opacity:1,y:0 }}
-          transition={{ duration:0.8 }}
-          className="text-5xl font-bold text-center"
-        >
-          Mes Projets
-        </motion.h2>
+        <div className="text-center">
 
-        <p className="text-center text-gray-400 mt-6 max-w-3xl mx-auto">
-          Une sélection de projets que j'ai réalisés en développement web,
-          mobile et backend.
-        </p>
+          <p className="text-violet-400 font-semibold uppercase tracking-widest">
+            Portfolio
+          </p>
 
-        <div className="grid lg:grid-cols-3 md:grid-cols-2 gap-10 mt-20">
+          <h2 className="text-4xl md:text-6xl font-black text-white mt-3">
+            Mes projets
+          </h2>
 
-          {projects.map((project,index)=>(
-            <motion.div
+          <p className="text-gray-400 max-w-2xl mx-auto mt-5">
+            Quelques projets que j'ai conçus en développement mobile,
+            web et backend.
+          </p>
+
+        </div>
+
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-16">
+
+          {projects.map((project, index) => (
+
+            <motion.article
               key={project.id}
-              initial={{ opacity:0,y:60 }}
-              whileInView={{ opacity:1,y:0 }}
-              transition={{ delay:index*0.15 }}
-              whileHover={{ scale:1.04 }}
-              className="rounded-3xl overflow-hidden bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl"
+              initial={{
+                opacity: 0,
+                y: 40,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{ once: true }}
+              transition={{
+                duration: 0.5,
+                delay: index * 0.08,
+              }}
+              className="
+                group
+                overflow-hidden
+                rounded-3xl
+                bg-white/[0.04]
+                border
+                border-white/10
+                hover:border-violet-500/30
+                transition
+              "
             >
 
-              <img
+              {/* IMAGE */}
 
-src={project.image}
+              <div className="h-56 overflow-hidden bg-gradient-to-br from-violet-700 to-blue-900">
 
-alt={project.name}
+                <img
+                  src={project.image}
+                  alt={project.name}
+                  className="
+                    w-full
+                    h-full
+                    object-cover
+                    group-hover:scale-105
+                    transition
+                    duration-500
+                  "
+                />
 
-className="w-full h-60 object-cover"
+              </div>
 
-/>
 
-              <div className="p-7">
+              {/* CONTENU */}
 
-                <p className="text-gray-300 leading-7">
+              <div className="p-6">
+
+                <span className="text-sm text-violet-400 font-medium">
+                  {project.category}
+                </span>
+
+                <h3 className="text-2xl font-bold text-white mt-2">
+                  {project.name}
+                </h3>
+
+                <p className="text-gray-400 leading-7 mt-3">
                   {project.description}
                 </p>
 
-                <div className="flex flex-wrap gap-2 mt-6">
 
-                  {project.technologies.map((tech)=>(
+                {/* TECHNOLOGIES */}
+
+                <div className="flex flex-wrap gap-2 mt-5">
+
+                  {project.technologies.slice(0, 4).map((tech) => (
+
                     <span
                       key={tech}
-                      className="bg-violet-500/20 text-violet-300 px-3 py-1 rounded-full text-sm"
+                      className="
+                        px-3
+                        py-1
+                        rounded-full
+                        bg-violet-500/10
+                        text-violet-300
+                        text-xs
+                      "
                     >
                       {tech}
                     </span>
+
                   ))}
 
                 </div>
 
-                <div className="flex gap-5 mt-8">
+
+                {/* BOUTONS */}
+
+                <div className="flex gap-3 mt-7">
+
+                  <Link
+                    to={`/projects/${project.slug}`}
+                    className="
+                      flex-1
+                      flex
+                      items-center
+                      justify-center
+                      gap-2
+                      px-4
+                      py-3
+                      rounded-xl
+                      bg-violet-600
+                      hover:bg-violet-500
+                      transition
+                      text-sm
+                      font-semibold
+                    "
+                  >
+                    <FaExternalLinkAlt size={12} />
+                    Voir le projet
+                  </Link>
+
 
                   <a
-href="#"
-                    className="flex items-center gap-2 text-white hover:text-violet-400"
+                    href={project.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="
+                      w-12
+                      flex
+                      items-center
+                      justify-center
+                      rounded-xl
+                      border
+                      border-white/10
+                      hover:bg-white/5
+                      transition
+                    "
+                    aria-label="GitHub"
                   >
-                    <FaGithub/>
-                    GitHub
-                  </a>
-
-                  <a
-href="#"
-                    className="flex items-center gap-2 text-white hover:text-violet-400"
-                  >
-                    <FaExternalLinkAlt/>
-                    Demo
+                    <FaGithub />
                   </a>
 
                 </div>
 
               </div>
 
-            </motion.div>
+            </motion.article>
+
           ))}
 
         </div>
 
       </div>
+
     </section>
   );
-};
-
-export default Projects;
+}

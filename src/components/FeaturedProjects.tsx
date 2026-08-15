@@ -5,10 +5,10 @@ import diantbi from "../assets/images/diantbi.png";
 
 const featuredProjects = [
   {
-    title: "GovAction",
+    title: "Senapp",
     image: govaction,
     description:
-      "Plateforme GovTech permettant les signalements citoyens, les paiements, l'identité numérique et les tableaux de bord administratifs.",
+      "Plateforme Senapp permettant les signalements citoyens, les paiements, l'identité numérique et les tableaux de bord administratifs.",
     technologies: [
       "React Native",
       "Expo",

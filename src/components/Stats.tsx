@@ -1,13 +1,13 @@
 export default function Stats() {
   const stats = [
-    { number: "7+", title: "Projets" },
+    { number: "5+", title: "Projets" },
     { number: "20+", title: "Technologies" },
     { number: "3+", title: "Années de pratique" },
     { number: "100%", title: "Motivation" },
   ];
 
   return (
-    <section className="py-24 bg-[#050816]">
+    <section className=" tech-grid py-24 bg-[#050816]">
       <div className="max-w-6xl mx-auto grid grid-cols-2 lg:grid-cols-4 gap-8 px-6">
         {stats.map((item) => (
           <div

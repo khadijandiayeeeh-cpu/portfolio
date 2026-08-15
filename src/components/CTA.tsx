@@ -1,59 +1,108 @@
 import { motion } from "framer-motion";
+import { FaArrowRight } from "react-icons/fa";
 
 export default function CTA() {
   return (
-    <section className="py-32">
+    <section className="py-20 px-6">
 
-      <motion.div
+      <div className="max-w-5xl mx-auto">
 
-        initial={{ opacity: 0, scale: .9 }}
-
-        whileInView={{ opacity: 1, scale: 1 }}
-
-        transition={{ duration: .8 }}
-
-        className="max-w-6xl mx-auto
-        rounded-[40px]
-        bg-gradient-to-r
-        from-violet-700
-        via-indigo-700
-        to-blue-600
-        p-20
-        text-center"
-
-      >
-
-        <h2 className="text-6xl font-black">
-
-          Donnons vie à votre projet.
-
-        </h2>
-
-        <p className="mt-8 text-xl max-w-3xl mx-auto">
-
-          Que ce soit une application web,
-          mobile ou une plateforme innovante,
-          je peux transformer votre idée en réalité.
-
-        </p>
-
-        <button
-          className="mt-12
-          bg-white
-          text-black
-          px-10
-          py-5
-          rounded-2xl
-          font-bold
-          hover:scale-105
-          duration-300"
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="
+            relative
+            overflow-hidden
+            rounded-[32px]
+            border
+            border-violet-500/20
+            bg-gradient-to-br
+            from-violet-600/15
+            via-purple-600/10
+            to-blue-600/10
+            p-8
+            md:p-12
+            text-center
+          "
         >
 
-          Me Contacter
+          {/* GLOW */}
 
-        </button>
+          <div
+            className="
+              absolute
+              left-1/2
+              -top-32
+              -translate-x-1/2
+              w-72
+              h-72
+              rounded-full
+              bg-violet-600/20
+              blur-[100px]
+            "
+          />
 
-      </motion.div>
+          <div className="relative">
+
+            <p className="text-violet-400 font-semibold text-sm tracking-widest uppercase">
+              Une opportunité ?
+            </p>
+
+            <h2
+              className="
+                mt-4
+                text-3xl
+                md:text-5xl
+                font-black
+                text-white
+              "
+            >
+              Échangeons sur vos besoins.
+            </h2>
+
+            <p
+              className="
+                mt-5
+                max-w-2xl
+                mx-auto
+                text-gray-400
+                leading-7
+              "
+            >
+              Je suis ouverte aux opportunités professionnelles,
+              collaborations et projets numériques.
+            </p>
+
+            <a
+              href="#contact"
+              className="
+                inline-flex
+                items-center
+                gap-3
+                mt-8
+                px-7
+                py-3.5
+                rounded-xl
+                bg-white
+                text-black
+                font-semibold
+                hover:bg-gray-200
+                transition
+              "
+            >
+              Me contacter
+
+              <FaArrowRight size={13} />
+
+            </a>
+
+          </div>
+
+        </motion.div>
+
+      </div>
 
     </section>
   );

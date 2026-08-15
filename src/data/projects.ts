@@ -1,115 +1,88 @@
 export const projects = [
   {
     id: 1,
-    name: "GovAction",
-    title: "GovAction",
-    category: "GovTech",
+    slug: "senapp",
+    name: "SenApp",
+    category: "Application mobile",
     description:
-      "Plateforme numérique destinée à faciliter les interactions entre citoyens et services publics.",
+      "Une application mobile qui centralise différents services utiles au Sénégal.",
+    image: "/projects/senapp/1.png",
     technologies: [
       "React Native",
       "Expo",
       "Node.js",
       "Supabase",
-      "PostgreSQL"
+      "PostgreSQL",
     ],
     github: "#",
-    demo: "#"
   },
 
   {
     id: 2,
+    slug: "diant-bi",
     name: "Diant Bi",
-    title: "Diant Bi",
-    category: "Marketplace",
+    category: "Plateforme numérique",
     description:
-      "Plateforme dédiée aux véhicules, terrains et services.",
+      "Une plateforme dédiée à l'immobilier, aux véhicules et aux services.",
+    image: "/projects/diant-bi/1.png",
     technologies: [
-      "React",
+      "React Native",
+      "Expo",
       "Node.js",
-      "Supabase"
+      "Supabase",
     ],
     github: "#",
-    demo: "#"
   },
 
   {
     id: 3,
-    name: "SenApp",
-    title: "SenApp",
-    category: "Application",
+    slug: "ecotech",
+    name: "EcoTech",
+    category: "Application / plateforme",
     description:
-      "Application numérique développée pour répondre à des besoins locaux.",
+      "Une solution numérique autour de l'innovation et des enjeux environnementaux.",
+    image: "/projects/ecotech/1.png",
     technologies: [
+      "React",
       "React Native",
-      "Expo",
-      "Supabase"
+      "Node.js",
+      "Supabase",
     ],
     github: "#",
-    demo: "#"
   },
 
   {
     id: 4,
-    name: "EcoTech",
-    title: "EcoTech",
-    category: "GreenTech",
+    slug: "trezobank",
+    name: "TrezoBank",
+    category: "Site web",
     description:
-      "Solution numérique orientée technologie et environnement.",
+      "Une interface web moderne inspirée des services bancaires numériques.",
+    image: "/projects/trezobank/1.png",
     technologies: [
       "React",
-      "Node.js",
-      "PostgreSQL"
+      "TypeScript",
+      "Tailwind CSS",
+      "JavaScript",
     ],
     github: "#",
-    demo: "#"
   },
 
   {
     id: 5,
-    name: "TrezoPay",
-    title: "TrezoPay",
-    category: "FinTech",
+    slug: "teranga-saveurs",
+    name: "Teranga Saveurs",
+    category: "Site web",
     description:
-      "Solution numérique orientée paiements et services financiers.",
+      "Un site web dédié à la découverte et à la valorisation de la gastronomie sénégalaise.",
+    image: "/projects/teranga-saveurs/1.png",
     technologies: [
       "React",
-      "Node.js",
-      "Supabase"
+      "JavaScript",
+      "Tailwind CSS",
+      "HTML",
+      "CSS",
     ],
     github: "#",
-    demo: "#"
   },
-
-  {
-    id: 6,
-    name: "Teranga Saveur",
-    title: "Teranga Saveur",
-    category: "FoodTech",
-    description:
-      "Plateforme numérique autour de la gastronomie et des produits locaux.",
-    technologies: [
-      "React",
-      "Node.js",
-      "Supabase"
-    ],
-    github: "#",
-    demo: "#"
-  },
-
-  {
-    id: 7,
-    name: "SunSmart",
-    title: "SunSmart",
-    category: "CleanTech",
-    description:
-      "Solution numérique orientée énergie solaire et innovation.",
-    technologies: [
-      "React",
-      "Node.js",
-      "PostgreSQL"
-    ],
-    github: "#",
-    demo: "#"
-  }
 ];

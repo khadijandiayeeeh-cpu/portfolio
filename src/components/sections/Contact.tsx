@@ -94,7 +94,7 @@ export default function Contact() {
             {/* EMAIL */}
 
             <a
-              href="mailto:tonemail@example.com"
+              href="mailto:khadijandiayeeeh@gmail.com"
               className="
                 flex
                 items-center

@@ -112,7 +112,7 @@ export default function Hero() {
                 text-white
               "
             >
-              Khadija
+              Khadidiatou
               <span className="text-violet-500">.</span>
             </h1>
 
@@ -437,7 +437,7 @@ export default function Hero() {
 
                 <img
                   src={profile}
-                  alt="Khadija"
+                  alt="Khadidiatou"
                   className="
                     w-full
                     h-full

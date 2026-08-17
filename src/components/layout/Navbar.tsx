@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-8 py-5 flex justify-between items-center">
 
         <h1 className="text-2xl font-bold text-white">
-          Khadija<span className="text-violet-400">.</span>
+          Khadidiatou<span className="text-violet-400">.</span>
         </h1>
 
         <div className="hidden md:flex gap-8">

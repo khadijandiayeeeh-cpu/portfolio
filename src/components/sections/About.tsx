@@ -77,7 +77,7 @@ export default function About() {
             <div className="space-y-5 mt-6 text-gray-400 leading-8">
 
               <p>
-                Je suis <strong className="text-white">Khadidiatou</strong>,
+                Je suis <strong className="text-white">Khadidiatou NDIAYE</strong>,
                 étudiante en mathématiques, physique et informatique à
                 l'Université Amadou Makhtar Mbow, avec un intérêt particulier
                 pour le développement logiciel et les technologies numériques.

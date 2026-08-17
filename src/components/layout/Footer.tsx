@@ -18,7 +18,7 @@ export default function Footer() {
 
 <h2 className="text-3xl font-bold">
 
-Khadija
+Khadidiatou
 
 <span className="text-violet-500">
 
@@ -64,7 +64,7 @@ Développeuse Full Stack • IA • Cybersécurité
 
 <p className="text-center text-gray-500">
 
-© 2026 Khadija Ndiaye.
+© 2026 Khadidiatou Ndiaye.
 
 Tous droits réservés.
 

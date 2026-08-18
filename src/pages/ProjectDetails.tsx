@@ -96,6 +96,7 @@ const projects = {
       "/projects/ecotech/1.png",
       "/projects/ecotech/2.png",
       "/projects/ecotech/3.png",
+      "/projects/ecotech/4.png",
     ],
     github: "#",
     demo: "#",

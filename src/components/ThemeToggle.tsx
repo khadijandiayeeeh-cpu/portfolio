@@ -1,40 +1,59 @@
-import { useState,useEffect } from "react";
-import { FaMoon,FaSun } from "react-icons/fa";
+import { useEffect, useState } from "react";
+import { FaMoon, FaSun } from "react-icons/fa";
 
-export default function ThemeToggle(){
+export default function ThemeToggle() {
+  const [isLight, setIsLight] = useState(false);
 
-const [dark,setDark]=useState(true)
+  useEffect(() => {
+    const savedTheme = localStorage.getItem("portfolio-theme");
 
-useEffect(()=>{
+    if (savedTheme === "light") {
+      setIsLight(true);
+      document.documentElement.classList.add("portfolio-light");
+    }
+  }, []);
 
-document.documentElement.classList.toggle("dark",dark)
+  const toggleTheme = () => {
+    const nextLight = !isLight;
 
-},[dark])
+    setIsLight(nextLight);
 
-return(
+    if (nextLight) {
+      document.documentElement.classList.add("portfolio-light");
+      localStorage.setItem("portfolio-theme", "light");
+    } else {
+      document.documentElement.classList.remove("portfolio-light");
+      localStorage.setItem("portfolio-theme", "dark");
+    }
+  };
 
-<button
-
-onClick={()=>setDark(!dark)}
-
-className="fixed bottom-8 left-8 w-14 h-14 rounded-full bg-violet-600 text-white flex justify-center items-center shadow-xl"
-
->
-
-{
-
-dark?
-
-<FaSun/>
-
-:
-
-<FaMoon/>
-
-}
-
-</button>
-
-)
-
+  return (
+    <button
+      type="button"
+      onClick={toggleTheme}
+      className="
+        fixed
+        bottom-6
+        left-6
+        z-[9999]
+        w-12
+        h-12
+        rounded-full
+        flex
+        items-center
+        justify-center
+        bg-violet-600
+        text-white
+        border
+        border-white/20
+        shadow-[0_0_25px_rgba(139,92,246,0.5)]
+        hover:scale-110
+        transition-all
+        duration-300
+      "
+      title={isLight ? "Mode sombre" : "Mode clair"}
+    >
+      {isLight ? <FaMoon size={18} /> : <FaSun size={18} />}
+    </button>
+  );
 }

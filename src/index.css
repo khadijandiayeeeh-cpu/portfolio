@@ -137,3 +137,59 @@ img {
 
   background-size: 50px 50px;
 }
+/* =================================
+   MODE CLAIR DU PORTFOLIO
+   Le thème sombre reste inchangé
+================================= */
+
+html.portfolio-light {
+  background: #f8fafc;
+}
+
+html.portfolio-light body {
+  background: #f8fafc;
+  color: #111827;
+}
+
+/* Sections sombres */
+
+html.portfolio-light .bg-\[\#050816\] {
+  background: #f8fafc !important;
+}
+
+/* Textes */
+
+html.portfolio-light .text-white {
+  color: #111827 !important;
+}
+
+html.portfolio-light .text-gray-300 {
+  color: #374151 !important;
+}
+
+html.portfolio-light .text-gray-400 {
+  color: #6b7280 !important;
+}
+
+/* Cartes */
+
+html.portfolio-light .bg-white\/5 {
+  background: rgba(255, 255, 255, 0.85) !important;
+}
+
+html.portfolio-light .bg-white\/10 {
+  background: rgba(255, 255, 255, 0.9) !important;
+}
+
+/* Bordures */
+
+html.portfolio-light .border-white\/10 {
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+/* Navigation */
+
+html.portfolio-light nav {
+  background: rgba(255, 255, 255, 0.8) !important;
+  border-color: rgba(15, 23, 42, 0.1) !important;
+}

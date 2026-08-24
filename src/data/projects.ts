@@ -21,7 +21,7 @@ export const projects = [
     id: 2,
     slug: "diant-bi",
     name: "Diant Bi",
-    category: "Plateforme numérique",
+    category: "Application mobile",
     description:
       "Une plateforme dédiée à l'immobilier, aux véhicules et aux services.",
     image: "/projects/diant-bi/1.png",
@@ -38,7 +38,7 @@ export const projects = [
     id: 3,
     slug: "ecotech",
     name: "EcoTech",
-    category: "Application / plateforme",
+    category: "Site web",
     description:
       "Une solution numérique autour de l'innovation et des enjeux environnementaux.",
     image: "/projects/ecotech/1.png",

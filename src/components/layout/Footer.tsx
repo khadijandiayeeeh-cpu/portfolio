@@ -1,8 +1,4 @@
-import {
- FaGithub,
- FaLinkedin,
- FaEnvelope
-} from "react-icons/fa";
+
 
 export default function Footer() {
 
@@ -38,23 +34,6 @@ Développeuse Full Stack • IA • Cybersécurité
 
 <div className="flex gap-6">
 
-<a href="https://github.com/khadijandiayeeeh-cpu">
-
-<FaGithub size={28}/>
-
-</a>
-
-<a href="https://www.linkedin.com/in/khadidiatou-ndiaye-329a70374/">
-
-<FaLinkedin size={28}/>
-
-</a>
-
-<a href="">
-
-<FaEnvelope size={28}/>
-
-</a>
 
 </div>
 

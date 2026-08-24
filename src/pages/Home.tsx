@@ -19,7 +19,7 @@ import DownloadCV from "../components/DownloadCV";
 import Achievements from "../components/Achievements";
 import Certificates from "../components/Certificates";
 import GlowBackground from "../components/GlowBackground";
-
+import LookingFor from "../components/LookingFor";
 
 export default function Home() {
   return (
@@ -36,7 +36,7 @@ export default function Home() {
 
       <About />
 
-
+<LookingFor />
       <SkillsSection />
 
       <ExpertiseServices />

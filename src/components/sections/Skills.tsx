@@ -1,4 +1,4 @@
-import SkillCard from "../SkillCard";
+import SkillsCard from "../SkillsCard";
 import { skillCategories } from "../../data/skills";
 
 export default function Skills() {
@@ -12,7 +12,7 @@ export default function Skills() {
 
         <div className="grid lg:grid-cols-2 gap-8 mt-20">
           {skillCategories.map((category) => (
-            <SkillCard
+            <SkillsCard
               key={category.title}
               title={category.title}
               skills={category.skills}

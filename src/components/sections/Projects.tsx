@@ -14,9 +14,6 @@ export default function Projects() {
 
         <div className="text-center">
 
-          <p className="text-violet-400 font-semibold uppercase tracking-widest">
-            Portfolio
-          </p>
 
           <h2 className="text-4xl md:text-6xl font-black text-white mt-3">
             Mes projets

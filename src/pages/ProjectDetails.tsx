@@ -42,7 +42,7 @@ const projects = {
 
   "diant-bi": {
     title: "Diant Bi",
-    category: "Plateforme numérique",
+    category: "Application mobile",
     description:
       "Une plateforme dédiée à l'immobilier, aux véhicules et aux services au Sénégal.",
     longDescription:
@@ -74,7 +74,7 @@ const projects = {
 
   ecotech: {
     title: "EcoTech",
-    category: "Application / plateforme",
+    category: "Site web",
     description:
       "Une solution numérique autour de l'innovation et des enjeux environnementaux.",
     longDescription:

@@ -181,13 +181,8 @@ export default function Hero() {
             >
 
               {[
-                "React",
-                "Html",
-                "Css",
-                "Javascript",
-                "React Native",
-                "Node.js",
-                "Supabase",
+                "frontend",
+                "backend",
                 "IA",
                 "Cybersecurity",
               ].map((tech) => (
@@ -294,7 +289,7 @@ export default function Hero() {
             >
 
               <a
-                href="#"
+                href="https://github.com/khadijandiayeeeh-cpu"
                 aria-label="GitHub"
                 className="
                   w-11
@@ -316,7 +311,7 @@ export default function Hero() {
 
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/khadidiatou-ndiaye-329a70374/"
                 aria-label="LinkedIn"
                 className="
                   w-11
@@ -338,7 +333,7 @@ export default function Hero() {
 
 
               <a
-                href="#contact"
+                href="khadijandiayeeeh@gmail.com"
                 aria-label="Email"
                 className="
                   w-11
@@ -476,8 +471,7 @@ export default function Hero() {
                   shadow-2xl
                 "
               >
-
-                <p className="text-[10px] sm:text-xs text-gray-400">
+              <p className="text-[10px] sm:text-xs text-gray-400">
                   Spécialisation
                 </p>
 
@@ -557,43 +551,6 @@ export default function Hero() {
           "
         >
 
-          <div className="py-4">
-
-            <p className="text-2xl sm:text-4xl font-black text-white">
-              5+
-            </p>
-
-            <p className="text-xs sm:text-sm text-gray-500 mt-1">
-              Projets
-            </p>
-
-          </div>
-
-
-          <div className="py-4 border-x border-white/10">
-
-            <p className="text-2xl sm:text-4xl font-black text-white">
-              20+
-            </p>
-
-            <p className="text-xs sm:text-sm text-gray-500 mt-1">
-              Technologies
-            </p>
-
-          </div>
-
-
-          <div className="py-4">
-
-            <p className="text-2xl sm:text-4xl font-black text-white">
-              2
-            </p>
-
-            <p className="text-xs sm:text-sm text-gray-500 mt-1">
-              Apps mobiles
-            </p>
-
-          </div>
 
         </motion.div>
 

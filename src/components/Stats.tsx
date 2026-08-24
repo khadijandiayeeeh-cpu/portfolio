@@ -1,7 +1,7 @@
 export default function Stats() {
   const stats = [
     { number: "5+", title: "Projets" },
-    { number: "20+", title: "Technologies" },
+    { number: "18+", title: "Technologies" },
     { number: "3+", title: "Années de pratique" },
     { number: "100%", title: "Motivation" },
   ];

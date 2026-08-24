@@ -4,7 +4,6 @@ import {
   FaMapMarkerAlt,
   FaGithub,
   FaLinkedin,
-  FaPaperPlane,
 } from "react-icons/fa";
 
 export default function Contact() {
@@ -190,7 +189,7 @@ export default function Contact() {
             <div className="flex gap-3 mt-8">
 
               <a
-                href="#"
+                href="https://github.com/khadijandiayeeeh-cpu"
                 className="
                   w-11
                   h-11
@@ -209,7 +208,7 @@ export default function Contact() {
               </a>
 
               <a
-                href="#"
+                href="https://www.linkedin.com/in/khadidiatou-ndiaye-329a70374/"
                 className="
                   w-11
                   h-11
@@ -230,141 +229,6 @@ export default function Contact() {
             </div>
 
           </motion.div>
-
-
-          {/* FORMULAIRE */}
-
-          <motion.form
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="
-              rounded-[30px]
-              border
-              border-white/10
-              bg-white/[0.04]
-              backdrop-blur-xl
-              p-8
-              md:p-10
-            "
-          >
-
-            <h3 className="text-2xl font-bold text-white">
-              Envoyer un message
-            </h3>
-
-
-            <div className="grid sm:grid-cols-2 gap-4 mt-7">
-
-              <input
-                type="text"
-                placeholder="Votre nom"
-                className="
-                  w-full
-                  px-4
-                  py-4
-                  rounded-xl
-                  bg-black/20
-                  border
-                  border-white/10
-                  text-white
-                  placeholder:text-gray-600
-                  outline-none
-                  focus:border-violet-500/50
-                  transition
-                "
-              />
-
-              <input
-                type="email"
-                placeholder="Votre email"
-                className="
-                  w-full
-                  px-4
-                  py-4
-                  rounded-xl
-                  bg-black/20
-                  border
-                  border-white/10
-                  text-white
-                  placeholder:text-gray-600
-                  outline-none
-                  focus:border-violet-500/50
-                  transition
-                "
-              />
-
-            </div>
-
-
-            <input
-              type="text"
-              placeholder="Sujet"
-              className="
-                w-full
-                mt-4
-                px-4
-                py-4
-                rounded-xl
-                bg-black/20
-                border
-                border-white/10
-                text-white
-                placeholder:text-gray-600
-                outline-none
-                focus:border-violet-500/50
-                transition
-              "
-            />
-
-
-            <textarea
-              rows={6}
-              placeholder="Votre message..."
-              className="
-                w-full
-                mt-4
-                px-4
-                py-4
-                rounded-xl
-                bg-black/20
-                border
-                border-white/10
-                text-white
-                placeholder:text-gray-600
-                outline-none
-                focus:border-violet-500/50
-                transition
-                resize-none
-              "
-            />
-
-
-            <button
-              type="submit"
-              className="
-                w-full
-                mt-5
-                py-4
-                rounded-xl
-                bg-violet-600
-                hover:bg-violet-500
-                transition
-                font-semibold
-                flex
-                items-center
-                justify-center
-                gap-3
-              "
-            >
-
-              Envoyer le message
-
-              <FaPaperPlane size={14} />
-
-            </button>
-
-          </motion.form>
 
         </div>
 

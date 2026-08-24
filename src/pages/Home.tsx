@@ -18,7 +18,6 @@ import ChatAssistant from "../components/ChatAssistant";
 import DownloadCV from "../components/DownloadCV";
 import Achievements from "../components/Achievements";
 import Certificates from "../components/Certificates";
-import CTA from "../components/CTA";
 import GlowBackground from "../components/GlowBackground";
 
 
@@ -55,7 +54,6 @@ export default function Home() {
 
       <DownloadCV />
 
-      <CTA />
 
       <Contact />
 

@@ -1,26 +1,44 @@
-import SkillsCard from "../SkillsCard";
-import { skillCategories } from "../../data/skills";
+export const skillCategories = [
+  {
+    title: "Développement Web",
+    color: "from-violet-600 to-blue-600",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "React",
+      "Tailwind CSS",
+    ],
+  },
 
-export default function Skills() {
-  return (
-    <section className="py-28 bg-[#050816]">
-      <div className="max-w-7xl mx-auto px-6">
+  {
+    title: "Développement Mobile",
+    color: "from-blue-600 to-cyan-500",
+    skills: [
+      "React Native",
+      "Expo",
+    ],
+  },
 
-        <h1 className="text-5xl font-bold text-center">
-          Mes Compétences
-        </h1>
+  {
+    title: "Backend & Données",
+    color: "from-emerald-500 to-teal-500",
+    skills: [
+      "Node.js",
+      "Express.js",
+      "Supabase",
+      "PostgreSQL",
+      "API REST",
+    ],
+  },
 
-        <div className="grid lg:grid-cols-2 gap-8 mt-20">
-          {skillCategories.map((category) => (
-            <SkillsCard
-              key={category.title}
-              title={category.title}
-              skills={category.skills}
-            />
-          ))}
-        </div>
-
-      </div>
-    </section>
-  );
-}
+  {
+    title: "Outils",
+    color: "from-orange-500 to-yellow-500",
+    skills: [
+      "Git",
+      "GitHub",
+      "VS Code",
+    ],
+  },
+];

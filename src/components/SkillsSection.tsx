@@ -16,9 +16,11 @@ export default function SkillsSection() {
           Mes Compétences
         </motion.h2>
 
-        <p className="text-center text-gray-400 mt-6">
-          Les technologies que j'utilise au quotidien.
+        <p className="text-center text-gray-400 mt-6 max-w-2xl mx-auto">
+           Les technologies et outils que j'utilise dans mes projets web,
+           mobiles et backend.
         </p>
+
 
         <div className="grid lg:grid-cols-2 gap-10 mt-20">
 

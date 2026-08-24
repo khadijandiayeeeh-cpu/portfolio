@@ -1,58 +1,44 @@
 export const skillCategories = [
   {
-    title: "Frontend",
-    color: "from-blue-500 to-cyan-500",
+    title: "Développement Web",
+    color: "from-violet-600 to-blue-600",
     skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React",
+      "Tailwind CSS",
+    ],
+  },
+
+  {
+    title: "Développement Mobile",
+    color: "from-blue-600 to-cyan-500",
+    skills: [
       "React Native",
       "Expo",
-      "TypeScript",
-      "JavaScript",
-      "HTML5",
-      "CSS3",
-      "Tailwind CSS",
-      "Vite"
-    ]
+    ],
   },
 
   {
-    title: "Backend",
-    color: "from-green-500 to-emerald-500",
+    title: "Backend & Base de données",
+    color: "from-emerald-500 to-teal-500",
     skills: [
       "Node.js",
-      "Express",
+      "Express.js",
       "Supabase",
       "PostgreSQL",
-      "Firebase",
-      "REST API",
-      "JWT",
-      "PHP"
-    ]
+      "API REST",
+    ],
   },
 
   {
-    title: "Intelligence Artificielle",
-    color: "from-violet-500 to-fuchsia-500",
+    title: "Outils & Environnement",
+    color: "from-orange-500 to-yellow-500",
     skills: [
-      "OpenAI API",
-      "Prompt Engineering",
-      "Chatbot",
-      "Voice Assistant",
-      "Python",
-      "Machine Learning"
-    ]
+      "Git",
+      "GitHub",
+      "VS Code",
+    ],
   },
-
-  {
-    title: "Cybersécurité",
-    color: "from-red-500 to-orange-500",
-    skills: [
-      "OWASP",
-      "JWT",
-      "Authentification",
-      "Chiffrement",
-      "Sécurité API",
-      "Bonnes pratiques"
-    ]
-  }
 ];

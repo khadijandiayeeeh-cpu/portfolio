@@ -129,7 +129,7 @@ export default function Hero() {
                   2000,
                   "Passionnée d'IA",
                   2000,
-                  "Cybersécurité",
+                  "Passionnée de Cybersécurité",
                   2000,
                 ]}
                 repeat={Infinity}
@@ -161,7 +161,7 @@ export default function Hero() {
                 lg:mx-0
               "
             >
-              Je conçois des applications web et mobiles modernes,
+              Je conçois des sites web et des applications mobiles modernes,
               des plateformes numériques et des solutions intelligentes
               avec l'intelligence artificielle.
             </p>
@@ -182,6 +182,9 @@ export default function Hero() {
 
               {[
                 "React",
+                "Html",
+                "Css",
+                "Javascript",
                 "React Native",
                 "Node.js",
                 "Supabase",

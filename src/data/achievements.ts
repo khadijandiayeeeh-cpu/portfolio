@@ -1,18 +1,18 @@
 export const achievements = [
   {
-    number: "07+",
+    number: "05+",
     title: "Projets réalisés",
     description: "Applications web, mobiles et plateformes."
   },
 
   {
-    number: "20+",
+    number: "18+",
     title: "Technologies",
     description: "Frontend, Backend, Mobile et Cloud."
   },
 
   {
-    number: "02",
+    number: "02+",
     title: "Applications mobiles",
     description: "Applications React Native."
   },

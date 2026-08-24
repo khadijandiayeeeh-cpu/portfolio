@@ -1,7 +1,6 @@
 import Navbar from "../components/layout/Navbar";
 import Hero from "../components/sections/Hero";
 import About from "../components/sections/About";
-import Stats from "../components/Stats";
 import SkillsSection from "../components/SkillsSection";
 import ExpertiseServices from "../components/ExpertiseServices";
 import Projects from "../components/sections/Projects";
@@ -21,7 +20,7 @@ import Achievements from "../components/Achievements";
 import Certificates from "../components/Certificates";
 import CTA from "../components/CTA";
 import GlowBackground from "../components/GlowBackground";
-import Timeline from "../components/Timeline";
+
 
 export default function Home() {
   return (
@@ -38,7 +37,6 @@ export default function Home() {
 
       <About />
 
-      <Stats />
 
       <SkillsSection />
 
@@ -54,7 +52,6 @@ export default function Home() {
 
       <Projects />
 
-      <Timeline />
 
       <DownloadCV />
 

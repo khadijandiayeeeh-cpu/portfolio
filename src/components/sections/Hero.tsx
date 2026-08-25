@@ -194,10 +194,9 @@ export default function Hero() {
             >
 
               {[
-                "React",
-                "React Native",
-                "Node.js",
-                "Supabase",
+                "Frontend",
+                "backend",
+                "cybersecurite",
                 "IA",
               ].map((tech) => (
 

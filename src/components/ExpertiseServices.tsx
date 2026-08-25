@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+
 import {
   FaLaptopCode,
   FaMobileAlt,
@@ -8,6 +9,7 @@ import {
   FaShieldAlt,
 } from "react-icons/fa";
 
+
 const services = [
   {
     icon: FaLaptopCode,
@@ -16,6 +18,7 @@ const services = [
       "Création de sites et applications web modernes, responsives et adaptés aux besoins des utilisateurs.",
     technologies: "React • TypeScript • Tailwind CSS",
   },
+
   {
     icon: FaMobileAlt,
     title: "Applications Mobiles",
@@ -23,6 +26,7 @@ const services = [
       "Conception d'applications mobiles Android et iOS avec une expérience utilisateur fluide.",
     technologies: "React Native • Expo",
   },
+
   {
     icon: FaServer,
     title: "Backend & API",
@@ -30,129 +34,158 @@ const services = [
       "Développement de serveurs, API REST et systèmes d'authentification pour applications web et mobiles.",
     technologies: "Node.js • Express • Supabase",
   },
+
   {
     icon: FaDatabase,
     title: "Bases de données",
     description:
-      "Conception et gestion de bases de données structurées, sécurisées et adaptées aux applications.",
-    technologies: "PostgreSQL • Supabase • Firebase",
+      "Conception et gestion de bases de données structurées et adaptées aux applications.",
+    technologies: "PostgreSQL • Supabase",
   },
+
   {
     icon: FaBrain,
     title: "Solutions IA",
     description:
-      "Intégration d'intelligence artificielle, assistants intelligents et automatisation dans les applications.",
-    technologies: "Python • APIs IA • Automatisation",
+      "Exploration et intégration de solutions d'intelligence artificielle dans des applications numériques.",
+    technologies: "Python • APIs IA",
   },
+
   {
     icon: FaShieldAlt,
     title: "Sécurité applicative",
     description:
-      "Mise en place de bonnes pratiques de sécurité pour protéger les utilisateurs, données et API.",
+      "Application de bonnes pratiques de sécurité pour protéger les utilisateurs, les données et les API.",
     technologies: "Authentication • JWT • OWASP",
   },
 ];
 
+
 export default function ExpertiseServices() {
+
   return (
+
     <section
       id="services"
-      className="py-32 px-6 bg-[#050816]"
+      className="py-28 px-6 bg-[#050816]"
     >
+
       <div className="max-w-7xl mx-auto">
 
-        {/* TITRE */}
 
-        <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-          className="text-center"
+        {/* =========================
+            TITRE
+        ========================== */}
+
+        <div
+          className="
+            text-center
+            max-w-3xl
+            mx-auto
+          "
         >
 
-          <p className="text-violet-400 font-semibold tracking-widest">
+          <p className="
+            text-violet-400
+            font-semibold
+            tracking-widest
+            text-sm
+          ">
             EXPERTISES & SERVICES
           </p>
 
-          <h2 className="text-5xl md:text-6xl font-black text-white mt-4">
+
+          <h2
+            className="
+              text-4xl
+              md:text-6xl
+              font-black
+              text-white
+              mt-4
+            "
+          >
             Ce que je peux réaliser
           </h2>
 
-          <p className="text-gray-400 max-w-3xl mx-auto mt-6 leading-8">
+
+          <p
+            className="
+              text-gray-400
+              mt-6
+              leading-8
+            "
+          >
             De la conception d'une interface jusqu'au développement
-            complet d'une application, je transforme les idées en
-            solutions numériques modernes.
+            d'une application, je transforme les idées en solutions
+            numériques modernes.
           </p>
 
-        </motion.div>
+        </div>
 
-        {/* CARTES */}
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-20">
+        {/* =========================
+            CARTES
+        ========================== */}
+
+        <div
+          className="
+            grid
+            md:grid-cols-2
+            lg:grid-cols-3
+            gap-6
+            mt-16
+          "
+        >
 
           {services.map((service, index) => {
 
             const Icon = service.icon;
 
             return (
+
               <motion.article
                 key={service.title}
+
                 initial={{
                   opacity: 0,
-                  y: 40,
+                  y: 20,
                 }}
+
                 whileInView={{
                   opacity: 1,
                   y: 0,
                 }}
-                viewport={{ once: true }}
+
+                viewport={{
+                  once: true,
+                  amount: 0.1,
+                }}
+
                 transition={{
-                  duration: 0.5,
-                  delay: index * 0.08,
+                  duration: 0.35,
+                  delay: Math.min(index * 0.04, 0.12),
                 }}
-                whileHover={{
-                  y: -8,
-                }}
+
                 className="
                   group
-                  relative
                   rounded-3xl
                   border
                   border-white/10
                   bg-white/[0.04]
-                  p-8
-                  overflow-hidden
-                  transition
-                  hover:border-violet-500/40
+                  p-7
+                  transition-transform
+                  duration-300
+                  hover:-translate-y-1
+                  hover:border-violet-500/30
                 "
               >
 
-                {/* GLOW */}
+                {/* ICÔNE */}
 
                 <div
                   className="
-                    absolute
-                    -right-20
-                    -top-20
-                    w-40
-                    h-40
-                    bg-violet-600/20
-                    blur-3xl
-                    rounded-full
-                    opacity-0
-                    group-hover:opacity-100
-                    transition
-                  "
-                />
-
-                {/* ICONE */}
-
-                <div
-                  className="
-                    relative
-                    w-16
-                    h-16
+                    w-14
+                    h-14
                     rounded-2xl
                     bg-violet-500/10
                     border
@@ -164,41 +197,71 @@ export default function ExpertiseServices() {
                 >
 
                   <Icon
-                    size={28}
+                    size={24}
                     className="text-violet-400"
                   />
 
                 </div>
 
+
                 {/* TITRE */}
 
-                <h3 className="relative text-2xl font-bold text-white mt-8">
+                <h3
+                  className="
+                    text-xl
+                    font-bold
+                    text-white
+                    mt-7
+                  "
+                >
                   {service.title}
                 </h3>
 
+
                 {/* DESCRIPTION */}
 
-                <p className="relative text-gray-400 mt-4 leading-7">
+                <p
+                  className="
+                    text-gray-400
+                    mt-4
+                    leading-7
+                  "
+                >
                   {service.description}
                 </p>
 
+
                 {/* TECHNOLOGIES */}
 
-                <div className="relative mt-7">
+                <div className="mt-6">
 
-                  <p className="text-sm text-violet-300">
+                  <span
+                    className="
+                      inline-block
+                      text-sm
+                      text-violet-300
+                      bg-violet-500/5
+                      px-3
+                      py-1.5
+                      rounded-lg
+                    "
+                  >
                     {service.technologies}
-                  </p>
+                  </span>
 
                 </div>
 
               </motion.article>
+
             );
+
           })}
 
         </div>
 
       </div>
+
     </section>
+
   );
 }

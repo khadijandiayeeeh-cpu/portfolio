@@ -5,21 +5,22 @@ import { projects } from "../../data/projects";
 
 export default function Projects() {
   return (
-    <section
-      id="projects"
-      className="py-28 px-6"
-    >
+    <section id="projects" className="py-28 px-6">
 
       <div className="max-w-7xl mx-auto">
 
-        <div className="text-center">
+        {/* TITRE */}
+        <div className="text-center max-w-3xl mx-auto">
 
+          <p className="text-violet-400 font-semibold tracking-widest text-sm">
+            MES RÉALISATIONS
+          </p>
 
           <h2 className="text-4xl md:text-6xl font-black text-white mt-3">
             Mes projets
           </h2>
 
-          <p className="text-gray-400 max-w-2xl mx-auto mt-5">
+          <p className="text-gray-400 mt-5 leading-7">
             Quelques projets que j'ai conçus en développement mobile,
             web et backend.
           </p>
@@ -27,25 +28,34 @@ export default function Projects() {
         </div>
 
 
+        {/* PROJETS */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-7 mt-16">
 
           {projects.map((project, index) => (
 
             <motion.article
               key={project.id}
+
               initial={{
                 opacity: 0,
-                y: 40,
+                y: 20,
               }}
+
               whileInView={{
                 opacity: 1,
                 y: 0,
               }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.5,
-                delay: index * 0.08,
+
+              viewport={{
+                once: true,
+                amount: 0.1,
               }}
+
+              transition={{
+                duration: 0.35,
+                delay: Math.min(index * 0.04, 0.12),
+              }}
+
               className="
                 group
                 overflow-hidden
@@ -54,24 +64,31 @@ export default function Projects() {
                 border
                 border-white/10
                 hover:border-violet-500/30
-                transition
+                transition-colors
+                duration-300
               "
             >
 
               {/* IMAGE */}
 
-              <div className="h-56 overflow-hidden bg-gradient-to-br from-violet-700 to-blue-900">
+              <div className="
+                h-52
+                overflow-hidden
+                bg-[#0b1020]
+              ">
 
                 <img
                   src={project.image}
                   alt={project.name}
+                  loading={index < 3 ? "eager" : "lazy"}
+                  decoding="async"
                   className="
                     w-full
                     h-full
                     object-cover
-                    group-hover:scale-105
-                    transition
+                    transition-transform
                     duration-500
+                    group-hover:scale-[1.03]
                   "
                 />
 
@@ -90,7 +107,12 @@ export default function Projects() {
                   {project.name}
                 </h3>
 
-                <p className="text-gray-400 leading-7 mt-3">
+                <p className="
+                  text-gray-400
+                  leading-7
+                  mt-3
+                  line-clamp-3
+                ">
                   {project.description}
                 </p>
 
@@ -137,12 +159,14 @@ export default function Projects() {
                       rounded-xl
                       bg-violet-600
                       hover:bg-violet-500
-                      transition
+                      transition-colors
+                      duration-300
                       text-sm
                       font-semibold
                     "
                   >
                     <FaExternalLinkAlt size={12} />
+
                     Voir le projet
                   </Link>
 
@@ -160,9 +184,10 @@ export default function Projects() {
                       border
                       border-white/10
                       hover:bg-white/5
-                      transition
+                      transition-colors
+                      duration-300
                     "
-                    aria-label="GitHub"
+                    aria-label={`GitHub - ${project.name}`}
                   >
                     <FaGithub />
                   </a>

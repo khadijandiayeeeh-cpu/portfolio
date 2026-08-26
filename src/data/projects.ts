@@ -6,7 +6,7 @@ export const projects = [
     category: "Application mobile",
     description:
       "Une application mobile qui centralise différents services utiles au Sénégal.",
-    image: "/projects/senapp/1.png",
+    image: "/projects/senapp/1.WebP",
     technologies: [
       "React Native",
       "Expo",
@@ -24,7 +24,7 @@ export const projects = [
     category: "Application mobile",
     description:
       "Une plateforme dédiée à l'immobilier, aux véhicules et aux services.",
-    image: "/projects/diant-bi/1.png",
+    image: "/projects/diant-bi/1.WebP",
     technologies: [
       "React Native",
       "Expo",
@@ -41,7 +41,7 @@ export const projects = [
     category: "Site web",
     description:
       "Une solution numérique autour de l'innovation et des enjeux environnementaux.",
-    image: "/projects/ecotech/1.png",
+    image: "/projects/ecotech/1.WebP",
     technologies: [
       "React",
       "React Native",
@@ -58,7 +58,7 @@ export const projects = [
     category: "Site web",
     description:
       "Une interface web moderne inspirée des services bancaires numériques.",
-    image: "/projects/trezobank/1.png",
+    image: "/projects/trezobank/1.WebP",
     technologies: [
       "React",
       "TypeScript",
@@ -75,7 +75,7 @@ export const projects = [
     category: "Site web",
     description:
       "Un site web dédié à la découverte et à la valorisation de la gastronomie sénégalaise.",
-    image: "/projects/teranga-saveurs/1.png",
+    image: "/projects/teranga-saveurs/1.WebP",
     technologies: [
       "React",
       "JavaScript",

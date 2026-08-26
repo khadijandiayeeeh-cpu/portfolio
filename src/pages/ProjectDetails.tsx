@@ -127,8 +127,8 @@ const projects = {
       "/projects/trezobank/2.WebP",
       "/projects/trezobank/3.WebP",
     ],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/khadijandiayeeeh-cpu/trezobank",
+    demo: "https://trezobank.netlify.app/",
   },
 
   "teranga-saveurs": {
@@ -153,12 +153,12 @@ const projects = {
       "Design moderne",
     ],
     images: [
-      "/projects/teranga-saveurs/1.png",
-      "/projects/teranga-saveurs/2.png",
-      "/projects/teranga-saveurs/3.png",
+      "/projects/teranga-saveurs/1.WebP",
+      "/projects/teranga-saveurs/2.WebP",
+      "/projects/teranga-saveurs/3.WebP",
     ],
-    github: "#",
-    demo: "#",
+    github: "https://github.com/khadijandiayeeeh-cpu/teranga-saveurs",
+    demo: "https://teranga-saveurs.netlify.app/",
   },
 };
 

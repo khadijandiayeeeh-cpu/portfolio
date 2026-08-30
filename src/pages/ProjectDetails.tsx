@@ -7,8 +7,18 @@ import {
   FaExternalLinkAlt,
   FaCode,
 } from "react-icons/fa";
-
-const projects = {
+type Project = {
+  title: string;
+  category: string;
+  description: string;
+  longDescription: string;
+  technologies: string[];
+  features: string[];
+  images: string[];
+  github?: string;
+  demo?: string;
+};
+const projects: Record<string, Project> = {
   senapp: {
     title: "SenApp",
     category: "Application mobile",

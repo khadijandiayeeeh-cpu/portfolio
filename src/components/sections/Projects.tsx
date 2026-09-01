@@ -36,24 +36,19 @@ export default function Projects() {
             <motion.article
               key={project.id}
 
-              initial={{
-                opacity: 0,
-                y: 20,
-              }}
-
+              initial={false}
               whileInView={{
                 opacity: 1,
-                y: 0,
               }}
-
               viewport={{
                 once: true,
                 amount: 0.1,
               }}
-
-              transition={{
-                duration: 0.35,
-                delay: Math.min(index * 0.04, 0.12),
+ 
+ 
+ 
+             transition={{
+                duration: 0.25,
               }}
 
               className="
@@ -87,8 +82,8 @@ export default function Projects() {
                     h-full
                     object-cover
                     transition-transform
-                    duration-500
-                    group-hover:scale-[1.03]
+                    duration-300
+                    md:group-hover:scale-[1.03]
                   "
                 />
 

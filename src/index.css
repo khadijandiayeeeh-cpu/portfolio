@@ -193,3 +193,147 @@ html.portfolio-light nav {
   background: rgba(255, 255, 255, 0.8) !important;
   border-color: rgba(15, 23, 42, 0.1) !important;
 }
+/* =========================
+   LIGHTWEIGHT BACKGROUND GLOW
+========================= */
+
+@keyframes glow-purple {
+  0%,
+  100% {
+    transform: translate3d(-5%, 5%, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(25%, 25%, 0) scale(1.15);
+  }
+}
+
+@keyframes glow-blue {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(-80px, 70px, 0) scale(1.08);
+  }
+}
+
+@keyframes glow-fuchsia {
+  0%,
+  100% {
+    transform: translate3d(-60px, 0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate3d(80px, -70px, 0) scale(1.08);
+  }
+}
+
+@keyframes glow-small {
+  0%,
+  100% {
+    transform: translate3d(-50px, 40px, 0);
+  }
+
+  50% {
+    transform: translate3d(70px, -60px, 0);
+  }
+}
+
+.animate-glow-purple {
+  animation: glow-purple 20s ease-in-out infinite;
+}
+
+.animate-glow-blue {
+  animation: glow-blue 24s ease-in-out infinite;
+}
+
+.animate-glow-fuchsia {
+  animation: glow-fuchsia 22s ease-in-out infinite;
+}
+
+.animate-glow-small {
+  animation: glow-small 16s ease-in-out infinite;
+}
+
+/* Téléphone : on garde l'effet mais on ralentit encore */
+@media (max-width: 767px) {
+  .animate-glow-purple {
+    animation-duration: 28s;
+  }
+
+  .animate-glow-blue {
+    animation-duration: 32s;
+  }
+
+  .animate-glow-fuchsia {
+    animation-duration: 30s;
+  }
+
+  .animate-glow-small {
+    animation-duration: 24s;
+  }
+}
+
+/* Respect des préférences de mouvement */
+@media (prefers-reduced-motion: reduce) {
+  .animate-glow-purple,
+  .animate-glow-blue,
+  .animate-glow-fuchsia,
+  .animate-glow-small {
+    animation: none;
+  }
+}
+/* =========================
+   LIGHT PARTICLES
+========================= */
+
+.particle {
+  position: absolute;
+  width: 4px;
+  height: 4px;
+  border-radius: 9999px;
+  background: rgba(139, 92, 246, 0.3);
+
+  animation-name: particle-float;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+
+  will-change: transform, opacity;
+}
+
+@keyframes particle-float {
+  0% {
+    transform: translate3d(0, 100vh, 0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: 0.4;
+  }
+
+  70% {
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translate3d(0, -100vh, 0);
+    opacity: 0;
+  }
+}
+
+/* Mobile : on désactive les particules */
+@media (max-width: 767px) {
+  .particles-background {
+    display: none;
+  }
+}
+
+/* Accessibilité */
+@media (prefers-reduced-motion: reduce) {
+  .particle {
+    animation: none;
+    opacity: 0.2;
+  }
+}

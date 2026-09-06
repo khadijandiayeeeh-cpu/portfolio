@@ -1,27 +1,27 @@
-import { motion } from "framer-motion";
-
-const particles = Array.from({ length: 80 });
+const particles = Array.from({ length: 24 });
 
 export default function ParticleBackground() {
   return (
-    <div className="fixed inset-0 overflow-hidden -z-10">
+    <div
+      className="
+        particles-background
+        fixed
+        inset-0
+        overflow-hidden
+        -z-10
+        pointer-events-none
+      "
+      aria-hidden="true"
+    >
       {particles.map((_, index) => (
-        <motion.div
+        <span
           key={index}
-          className="absolute w-2 h-2 rounded-full bg-violet-500/30"
-          initial={{
-            x: Math.random() * window.innerWidth,
-            y: Math.random() * window.innerHeight,
-          }}
-          animate={{
-            y: [null, -1000],
-            opacity: [0.2, 1, 0],
-          }}
-          transition={{
-            duration: 15 + Math.random() * 10,
-            repeat: Infinity,
-            ease: "linear",
-            delay: Math.random() * 10,
+          className="particle"
+          style={{
+            left: `${(index * 37) % 100}%`,
+            top: `${(index * 61) % 100}%`,
+            animationDelay: `${(index % 8) * 1.5}s`,
+            animationDuration: `${16 + (index % 6) * 2}s`,
           }}
         />
       ))}

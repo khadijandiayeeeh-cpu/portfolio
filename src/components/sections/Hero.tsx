@@ -403,21 +403,20 @@ export default function Hero() {
             {/* GLOW PRINCIPAL */}
 
             <div
-              className="
-                absolute
-                w-56
-                h-56
-                sm:w-72
-                sm:h-72
-                lg:w-[400px]
-                lg:h-[400px]
-                rounded-full
-                bg-violet-600/25
-                blur-[70px]
-                sm:blur-[90px]
-              "
-            />
-
+  className="
+    absolute
+    w-48
+    h-48
+    sm:w-72
+    sm:h-72
+    lg:w-[400px]
+    lg:h-[400px]
+    rounded-full
+    bg-violet-600/20
+    blur-[55px]
+    sm:blur-[80px]
+  "
+/>
 
             {/* PHOTO */}
 

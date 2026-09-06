@@ -1,103 +1,89 @@
-import { motion } from "framer-motion";
-
 export default function GlowBackground() {
   return (
-    <div className="fixed inset-0 -z-10 overflow-hidden pointer-events-none">
-
+    <div
+      className="
+        fixed
+        inset-0
+        -z-10
+        overflow-hidden
+        pointer-events-none
+        bg-[#050816]
+      "
+      aria-hidden="true"
+    >
       {/* Fond général */}
       <div className="absolute inset-0 bg-[#050816]" />
 
       {/* Lumière violette principale */}
-      <motion.div
+      <div
         className="
           absolute
-          w-[500px]
-          h-[500px]
+          -left-32
+          top-10
+          w-[380px]
+          h-[380px]
+          sm:w-[500px]
+          sm:h-[500px]
           rounded-full
           bg-violet-600/20
-          blur-[120px]
+          blur-[90px]
+          sm:blur-[110px]
+          animate-glow-purple
         "
-        animate={{
-          x: ["-10%", "35%", "-5%"],
-          y: ["5%", "30%", "10%"],
-          scale: [1, 1.2, 0.95, 1],
-        }}
-        transition={{
-          duration: 18,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       />
 
       {/* Lumière bleue */}
-      <motion.div
+      <div
         className="
           absolute
-          right-[-100px]
+          -right-24
           top-[20%]
-          w-[450px]
-          h-[450px]
+          w-[350px]
+          h-[350px]
+          sm:w-[450px]
+          sm:h-[450px]
           rounded-full
           bg-blue-600/15
-          blur-[130px]
+          blur-[90px]
+          sm:blur-[115px]
+          animate-glow-blue
         "
-        animate={{
-          x: [0, -150, 50, 0],
-          y: [0, 120, -80, 0],
-          scale: [1, 0.9, 1.15, 1],
-        }}
-        transition={{
-          duration: 22,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       />
 
-      {/* Lumière violette basse */}
-      <motion.div
+      {/* Lumière fuchsia basse */}
+      <div
         className="
           absolute
           left-[25%]
-          bottom-[-200px]
-          w-[500px]
-          h-[500px]
+          -bottom-40
+          w-[400px]
+          h-[400px]
+          sm:w-[500px]
+          sm:h-[500px]
           rounded-full
           bg-fuchsia-600/10
-          blur-[140px]
+          blur-[100px]
+          sm:blur-[125px]
+          animate-glow-fuchsia
         "
-        animate={{
-          x: [-100, 150, -50, -100],
-          y: [0, -100, 50, 0],
-          scale: [1, 1.15, 0.9, 1],
-        }}
-        transition={{
-          duration: 20,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       />
 
       {/* Petite lumière flottante */}
-      <motion.div
+      <div
         className="
           absolute
           left-[45%]
           top-[35%]
-          w-[180px]
-          h-[180px]
+          w-[140px]
+          h-[140px]
+          sm:w-[180px]
+          sm:h-[180px]
           rounded-full
           bg-violet-400/10
-          blur-[80px]
+          blur-[60px]
+          sm:blur-[75px]
+          animate-glow-small
         "
-        animate={{
-          x: [-80, 100, -50, -80],
-          y: [50, -80, 100, 50],
-        }}
-        transition={{
-          duration: 14,
-          repeat: Infinity,
-          ease: "easeInOut",
-        }}
       />
 
       {/* Vignette */}
@@ -108,7 +94,6 @@ export default function GlowBackground() {
           bg-[radial-gradient(circle_at_center,transparent_0%,rgba(5,8,22,0.35)_100%)]
         "
       />
-
     </div>
   );
 }
